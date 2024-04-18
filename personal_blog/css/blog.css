@@ -1,0 +1,110 @@
+h1{
+	font-family: "Merriweather";
+	text-align: center;
+	color: #000034;
+}
+.column1{
+	background-image: linear-gradient(to bottom, lightgrey, lightblue);
+	height: 250px;
+}
+.propic{
+	border-radius: 20px;
+	width: 225px;
+	height: auto;
+	padding: 10px 5px 5px 5px;
+}
+.column2 {
+	background-image: linear-gradient(to bottom, grey, lightgrey);
+	height: 250px;
+	padding: 20px;
+}
+h2, h3{
+	font-family: "Merriweather";
+	color: #000034;
+	padding-top: 10px;
+}
+.nav-link{
+	background: none;
+	display: inline-block;
+	font-size: 30px;
+	color: #fff;
+}
+body{
+	background-image: url(./chevron.jpg);
+	margin: 0% 15%;
+}
+button{
+	position: center;
+	background-color: lightblue;
+	color: #000034;
+	font-family: "Lato";
+}
+button:hover{
+	background-color: #000034;
+	color: grey;
+}
+p{
+	font-size: 20px;
+	font-family: "Lato";
+}
+.article{
+	color: #000034;
+	background-color: #fff;
+	min-height: 400px;
+	text-align: justify;
+	padding: 5px;
+}
+hr{
+	border-top: 5px solid #000034;
+}
+.project{
+	color: #000034;
+	background-color: #fff;
+	min-height: 400px;
+	text-align: justify;
+	padding: 5px;
+}
+.bio{
+	color: #000034;
+	background-color: #fff;
+	min-height: 600px;
+	text-align: justify;
+	padding: 5px;
+}
+.workspace{
+	width: 300px;
+	height: 250px;
+}
+.tech{
+	width: 300px;
+	height: 250px;
+}
+.bubbles{
+	width: 300px;
+	height: 250px;
+}
+.battleship{
+	width: 300px;
+	height: 250px;
+}
+.navybtn{
+	position: relative;
+	background: #000034;
+	color: #fff;
+	border: 1px double lightgrey;
+	margin: 10px;
+	padding: 2px;
+}
+.navybtn:hover{
+	background-color: lightblue;
+	color: grey;
+	font-family: "Lato";
+}
+.socials{
+	padding: 10px;
+}
+.email{
+	margin: auto;
+	display: block;
+	max-width: 125px;
+}
