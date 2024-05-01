@@ -16,13 +16,14 @@ pages = [
 	},
 ]
 def main():
-	top = open('./templates/top.html').read()
-	bottom = open('./templates/bottom.html').read()
+	template = open("templates/base.html").read()
 	for page in pages:
 		filename = page['filename']
 		output_file = page['output']
 		index = open(filename).read()
-		index_page = top + index + bottom
+		index_page = template.replace("{{content}}", index)
 		open(output_file, 'w+').write(index_page)
 main()
+
+
 
