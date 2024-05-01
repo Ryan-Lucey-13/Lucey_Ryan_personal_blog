@@ -1,4 +1,4 @@
-def main():
+"""def main():
 	top = open('./templates/top.html').read()
 	bottom = open('./templates/bottom.html').read()
 	#index
@@ -13,5 +13,21 @@ def main():
 	aboutme = open('./content/aboutme.html').read()
 	aboutme_page = top + aboutme + bottom
 	open('./docs/aboutme.html', 'w+').write(aboutme_page)
-main()
-
+main()"""
+pages = [
+	{
+	"filename": "content/index.html",
+	"output": "docs/index.html"
+	"title": "Blog",
+	},
+	{
+	"filename": "content/projects.html",
+	"output": "docs/projects.html"
+	"title": "Projects",
+	},
+	{
+	"filename": "content/aboutme.html",
+	"output": "docs/aboutme.html"
+	"title": "About Me",
+	},
+]
