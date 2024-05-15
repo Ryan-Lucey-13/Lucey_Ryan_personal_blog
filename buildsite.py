@@ -34,21 +34,3 @@ def apply_template(index, template, output_file):
 main()
 
 
-
-"""def read_in_pages():
-	for page in pages:
-		filename = page['filename']
-		output_file = page['output']
-	return filename
-	return output_file
-def apply_template(filename, output_file):
-	index = open(filename).read()
-	index_page = template.replace("{{content}}", index)
-	results = open(output_file, 'w+').write(index_page)
-	return results
-def main():
-	index = open(filename).read()
-	results = apply_template(filename, output_file)
-main()"""
-
-
