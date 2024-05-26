@@ -1,20 +1,20 @@
 pages = [
-	{
-		"filename": "content/index.html",
-		"output": "docs/index.html",
-		"title": "Blog",
-	},
-	{
-		"filename": "content/projects.html",
-		"output": "docs/projects.html",
-		"title": "Projects",
-	},
-	{
-		"filename": "content/aboutme.html",
-		"output": "docs/aboutme.html",
-		"title": "About Me",
-	},
 ]
+
+import glob
+all_html_files = glob.glob("content/*.html")
+
+import os
+
+for file in all_html_files:
+	file_path = file
+	file_name = os.path.basename(file_path)
+	name_only, extension = os.path.splitext(file_name)
+	pages.append({
+		"filename": file_path,
+		"title": name_only,
+		"output": "docs/" + file_name,
+	})
 
 def main():
 	template = open("templates/base.html").read()
@@ -24,31 +24,13 @@ def main():
 def create_page(page, template):
 	filename = page['filename']
 	output_file = page['output']
-	index = open(filename).read()
-	apply_template(index, template, output_file)
+	content = open(filename).read()
+	apply_template(content, template, output_file)
 
-def apply_template(index, template, output_file):
-	index_page = template.replace("{{content}}", index)
-	open(output_file, 'w+').write(index_page)
+def apply_template(content, template, output_file):
+	content_page = template.replace("{{content}}", content)
+	open(output_file, 'w+').write(content_page)
 
 main()
-
-
-
-"""def read_in_pages():
-	for page in pages:
-		filename = page['filename']
-		output_file = page['output']
-	return filename
-	return output_file
-def apply_template(filename, output_file):
-	index = open(filename).read()
-	index_page = template.replace("{{content}}", index)
-	results = open(output_file, 'w+').write(index_page)
-	return results
-def main():
-	index = open(filename).read()
-	results = apply_template(filename, output_file)
-main()"""
 
 
