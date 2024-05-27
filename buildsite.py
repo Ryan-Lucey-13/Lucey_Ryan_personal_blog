@@ -16,21 +16,21 @@ for file in all_html_files:
 		"output": "docs/" + file_name,
 	})
 
-def main():
-	template = open("templates/base.html").read()
-	for page in pages:
-		create_page(page, template)
+from jinja2 import Template
 
-def create_page(page, template):
-	filename = page['filename']
+for page in  pages:
+	index_html = open(page['filename']).read()
+
+	template_html = open("templates/base.html").read()
+	template = Template(template_html)
+	html_result = template.render(
+		title= page['title'],
+		content= index_html
+	)	
 	output_file = page['output']
-	content = open(filename).read()
-	apply_template(content, template, output_file)
+	open(output_file, 'w+').write(html_result)
 
-def apply_template(content, template, output_file):
-	content_page = template.replace("{{content}}", content)
-	open(output_file, 'w+').write(content_page)
 
-main()
+
 
 
