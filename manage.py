@@ -3,7 +3,7 @@ import utils
 import sys
 
 print("This is argv:", sys.argv)
-command = sys.argv[0]
+command = sys.argv[1]
 print(command)
 if command == "build":
 	print("Build was specified")
