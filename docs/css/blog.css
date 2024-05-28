@@ -24,10 +24,21 @@ h2, h3{
 	padding-top: 10px;
 }
 .nav-link{
-	background: none;
+	margin: 2px;
+	position: center;
+	background-color: lightblue;
+	color: #000034;
+	font-family: "Lato";
 	display: inline-block;
 	font-size: 30px;
 	color: #fff;
+}
+.nav-link.active{
+	background-color: #000034;
+}
+.nav-link:hover{
+	background-color: lightgrey;
+	color: #000034;
 }
 body{
 	background-image: url(./chevron.jpg);
@@ -107,4 +118,7 @@ hr{
 	margin: auto;
 	display: block;
 	max-width: 125px;
+}
+.email:hover{
+	background-color: lightblue;
 }
