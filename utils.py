@@ -7,16 +7,19 @@ pages = []
 
 all_html_files = glob.glob("content/*.html")
 
-for file in all_html_files:
-	file_path = file
-	file_name = os.path.basename(file_path)
-	name_only, extension = os.path.splitext(file_name)
-	pages.append({
-		"filename": file_path,
-		"title": name_only,
-		"output": "docs/" + file_name,
-		"output_filename": file_name
-	})
+def build_pages():
+	for file in all_html_files:
+		file_path = file
+		file_name = os.path.basename(file_path)
+		name_only, extension = os.path.splitext(file_name)
+		if name_only == "index":
+			name_only = "Homepage" #rename "index" to "Homepage"
+		pages.append({
+			"filename": file_path,
+			"title": name_only,
+			"output": "docs/" + file_name,
+			"output_filename": file_name
+		})
 
 def generate_content():
 	for page in  pages:

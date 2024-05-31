@@ -2,6 +2,8 @@
 import utils
 import sys
 
+utils.build_pages()
+
 print("This is argv:", sys.argv)
 command = sys.argv[1]
 print(command)
